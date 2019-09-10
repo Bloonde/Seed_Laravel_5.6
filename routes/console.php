@@ -42,6 +42,7 @@ Artisan::command('init-database {withSeed}', function ($withSeed = null){
         if($withSeed) {
             $this->call('db:seed', ['--class' => 'DatabaseSeeder']);
             $this->call('db:seed', ['--class' => 'EBarriosBloonde\CitiesStatesAndNationalities\Database\Seeds\CitiesStatesAndNationalitiesDatabaseSeeder']);
+
         }
     }
 });

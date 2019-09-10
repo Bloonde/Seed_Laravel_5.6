@@ -13,8 +13,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});*/
+Route::group(['middleware' => ['jwt.auth']], function (){
+    Route::group(['prefix' => 'register_user'], function(){
+        Route::get('/', 'RegisterUserController@list');
+        Route::get('/filter', 'RegisterUserController@SelectorList');
+        Route::get('/{id}', 'RegisterUserController@get');
+        Route::post('/', 'RegisterUserController@store');
+        Route::put('/{id}', 'RegisterUserController@update');
+        Route::delete('/{id}', 'RegisterUserController@destroy');
+        
+    });
 });
 
 Route::group(array('prefix' => 'v1'), function () {

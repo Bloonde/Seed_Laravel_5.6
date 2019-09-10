@@ -8,6 +8,7 @@ class Autoload
     const CLASSES = [
         'user' => 'EBarriosBloonde\UsersAndPrivileges\Configurations\UserConfigurationImpl',
         'profile' => 'EBarriosBloonde\UsersAndPrivileges\Configurations\ProfileConfigurationImpl',
+        'register_users' => 'App\Configurations\RegisterUserConfigurationImpl',
     ];
     const NAMESPACE = 'App\\';
     const ROUTE = 'app/';

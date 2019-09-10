@@ -161,6 +161,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        \EBarriosBloonde\CitiesStatesAndNationalities\CitiesStatesAndNationalitiesServiceProvider::class,
+
 
     ],
 
@@ -215,6 +217,9 @@ return [
         'UserController' => \EBarriosBloonde\UsersAndPrivileges\Http\Controllers\UserController::class,
         
         'FrameworkController' => Danvelcab\ProjectGenerator\FrameworkClasses\FrameworkController::class,
+        'CityController' => \EBarriosBloonde\CitiesStatesAndNationalities\Http\Controllers\CityController::class,
+        'StateController' => \EBarriosBloonde\CitiesStatesAndNationalities\Http\Controllers\StateController::class,
+        'CountryController' => \EBarriosBloonde\CitiesStatesAndNationalities\Http\Controllers\CountryController::class,
 
 
     ],
